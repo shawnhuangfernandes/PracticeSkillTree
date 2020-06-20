@@ -1,0 +1,49 @@
+@import '../../variables.scss';
+
+$skillSize: 400px;
+
+.skill {
+    height: $skillSize;
+    width: $skillSize;
+    cursor: pointer;
+    position: relative;
+    align-self: start;
+
+    .skillImages {
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .levelIndicator {
+        font-size: 2.5rem;
+        position: absolute;
+        top: 58%;  
+        text-align: center;
+        color: $orange;
+    }
+
+    .skillName {
+        font-size: 2.5rem;
+        position: absolute;
+        top: 68%;  
+        text-align: center;
+        color: $blackblue;
+    } 
+}
+
+.tooltip {
+    visibility: hidden;
+    font-size: 2.5rem;
+    top: 48%;
+    right: -90%;
+    position: absolute;
+    color: $orange;
+    pointer-events: none;
+}
+
+.skill:hover > .tooltip {
+    visibility: visible;
+}
+
